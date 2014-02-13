@@ -36,8 +36,8 @@ gulp.task('compass', function() {
 });
  
 gulp.task('default', function(){
-	gulp.run('compass');
   gulp.watch(["./**/*", "!./node_modules/**/*"], function(evt){
+    gulp.run('compass');
     gutil.log(gutil.colors.cyan(evt.path), 'changed');
     servers.lr.changed({
       body: {
